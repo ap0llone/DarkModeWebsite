@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    transition: all .44s;
+}
+:root{
+    --main-color: #db3d48;
+    --bg-color: #fff;
+    --text-color: #000;
+    --p-color: #555;
+}
+.dark-theme{
+    --main-color: #db3d48;
+    --bg-color: #000;
+    --text-color: #fff;
+    --p-color: #999;
+}
+body{
+    background-color: var(--bg-color);
+}
+/* --header-- */
+header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    margin-top: 20px;
+}
+span{
+    color: var(--main-color);
+}
+.logo{
+    color: var(--text-color);
+    font-size: 30px;
+    font-weight: 600;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    color: var(--text-color);
+    text-transform: uppercase;
+    padding: 15px;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+.nav-btn{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+#menu-icon{
+    color: var(--text-color);
+    font-size: 35px;
+    z-index: 1001;
+    cursor: pointer;
+    display: none;
+}
+.nav-btn span{
+    color: #fff;
+}
+.nav-btn img{
+    width: 20px;
+    margin-left: 10px;
+}
+/* --home-- */
+.home{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+.home-text{
+    padding: 33% 15%;
+}
+.home-text h5{
+    color: var(--text-color);
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin-left: 4px;
+}
+.home-text h2{
+    font-size: 66px;
+    color: var(--text-color);
+}
+.home-text p{
+    color: var(--p-color);
+    margin-bottom: 50px;
+}
+.home-text a{
+    background-color: var(--main-color);
+    padding: 10px 30px;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+.home-img img{
+    width: 450px;
+    margin-top: 90px;
+}
+.home-icons{
+    position: absolute;
+    bottom: 3%;
+    left: 7%;
+}
+.home-icons i{
+    color: var(--text-color);
+    padding: 6px;
+    font-size: 19px;
+}
+.home-icons i:hover{
+    transform: scale(1.1);
+    color: var(--main-color);
+}
+.home-icons .active i{
+    color: var(--main-color);
+}
+.home-arrow{
+    position: absolute;
+    bottom: 3%;
+    right: 4%;
+}
+.home-arrow i{
+    color: var(--text-color);
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 20px;
+}
+.home-arrow i:hover{
+    transform: translateY(3px);
+}
+/* --responsive-- */
+@media(max-width:1235px){
+    header{
+        padding: 15px 3%;
+        transition: .2s;
+    }
+}
+@media(max-width:990px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 70vh;
+        background: var(--main-color);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+        border-radius: 8px;
+    }
+    .navbar a{
+        color: var(--text-color);
+        display: block;
+        margin-left: 0;
+        margin: 1px 0;
+    }
+    .navbar a:hover{
+        color: var(--bg-color);
+    }
+    .navbar a.buy{
+        display: none;
+    }
+    .navbar.open{
+        right: 0;
+    }
+}
+@media(max-width:1160px){
+    .home-text{
+        padding: 30% 12%;
+        transition: .2s;
+    }
+}
+@media(max-width:1024px){
+    .home-text{
+        padding-top: 100px;
+    }
+    .home-text h5{
+        font-size: 13px;   
+    }
+    .home-text h2{
+        font-size: 55px;   
+    }
+    .home-text p{
+        font-size: 12px;
+        max-width: 300px;
+    }
+    .home-text a{
+        font-size: 13px;
+    }
+    .home-text a.btn{
+        font-size: 13px;
+    }
+    .home-text{
+        margin-top: 150px;
+    }
+}
+@media(max-width:1000px){
+    .home-img img{
+        display: none;
+    }
+    .home{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+}
