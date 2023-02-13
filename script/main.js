@@ -16,8 +16,8 @@ btn.onclick = function(){
 }
 
 //navbar hamburger
-var menu = document.querySelector('#menu-icon');
-var navBar = document.querySelector('.navbar');
+const menu = document.querySelector('#menu-icon');
+const navBar = document.querySelector('.navbar');
 
 menu.onclick = () => {
     menu.classList.toggle('bx-x');
